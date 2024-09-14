@@ -2,7 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>a divisible b</title>
+    <title>Square area</title>
   </head>
-  <body></body>
+  <body>
+    <h2>Square Area Calculator</h2>
+    <p>Input side length of the square:</p>
+    <p><input type="number" id="side_length" /></p>
+    <p><button type="button" onclick="calculate()">Calculate</button></p>
+    <p id="output"></p>
+
+    <script>
+      function calculate() {
+        let len = +document.getElementById("side_length").value;
+        let area = len * len;
+        document.getElementById(
+          "output"
+        ).innerHTML = `Area of the square = ${area}`;
+      }
+    </script>
+  </body>
 </html>

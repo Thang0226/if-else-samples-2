@@ -2,7 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>a divisible b</title>
+    <title>Meter to Feet Converter</title>
   </head>
-  <body></body>
+  <body>
+    <h2>Meter to Feet Converter</h2>
+    <p>
+      <input type="number" id="m" />m&harr;
+      <input type="number" id="ft" />ft<br />
+    </p>
+    <button type="button" onclick="convert()">Convert</button>
+
+    <script>
+      function convert() {
+        let meter = +document.getElementById("m").value;
+        let feet = meter * 3.2808;
+        document.getElementById("ft").value = feet;
+      }
+    </script>
+  </body>
 </html>

@@ -2,7 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>a divisible b</title>
+    <title>Degree converter</title>
   </head>
-  <body></body>
+  <body>
+    <h2>&deg;C to &deg;F converter</h2>
+    <p>
+      <input type="number" id="degC" />&deg;C &harr;
+      <input type="number" id="degF" />&deg;F<br />
+    </p>
+    <button type="button" onclick="convert()">Convert</button>
+
+    <script>
+      function convert() {
+        let degC = +document.getElementById("degC").value;
+        let degF = (degC * 9) / 5 + 32;
+        document.getElementById("degF").value = degF;
+      }
+    </script>
+  </body>
 </html>
