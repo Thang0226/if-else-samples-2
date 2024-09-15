@@ -1,3 +1,12 @@
+For phone charge calculator:
+    Phí thuê bao bắt buộc là 25 nghìn.
+
+    600 đồng cho mỗi gọi của 50 phút đầu tiên.
+
+    400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+
+    200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+
 1
 1*1.05
 1*1.05*1.05

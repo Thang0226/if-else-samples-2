@@ -5,6 +5,32 @@
     <title>Personal income tax</title>
   </head>
   <body>
-    <h2></h2>
+    <h2>
+      Phần mềm tính thuế thu nhập cá nhân<br />
+      <span style="font-style: italic; font-weight: normal; font-size: smaller">
+        *Đối với cá nhân cư trú ký hợp đồng lao động từ 3 tháng trở lên
+      </span>
+    </h2>
+    <form>
+      <table style="margin: 10px">
+        <tr>
+          <td>Tổng thu nhập:</td>
+          <td><input type="number" id="total-income" />triệu VND</td>
+        </tr>
+        <tr>
+          <td>Các khoản được miễn:</td>
+          <td><input type="number" id="exempt" />triệu VND</td>
+        </tr>
+        <tr>
+          <td>Các khoản giảm trừ:</td>
+          <td><input type="number" id="deduct" />triệu VND</td>
+        </tr>
+      </table>
+      <button type="button" onclick="calculate()">Tính thuế</button>
+      <button type="reset">Nhập lại</button>
+    </form>
+    <p id="output" style="font-style: italic">Result is displayed here</p>
+
+    <script src="personal_income_tax.js"></script>
   </body>
 </html>
