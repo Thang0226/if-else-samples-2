@@ -3,12 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <title>Interest Calculator</title>
+    <style>
+      table {
+        margin: 5px;
+      }
+      td {
+        height: 30px;
+      }
+      button {
+        margin: 5px;
+      }
+      p {
+        margin: 5px;
+      }
+    </style>
   </head>
+
   <body>
     <h2>Interest Calculator</h2>
+    <table>
+      <tr>
+        <td>Initial amount of money:</td>
+        <td><input type="number" id="amount" /> VND</td>
+      </tr>
+      <tr>
+        <td>Monthly interest rate:</td>
+        <td><input type="number" id="rate" /> %</td>
+      </tr>
+      <tr>
+        <td>Number of months deposited:</td>
+        <td><input type="number" id="num-month" /> months</td>
+      </tr>
+    </table>
+    <button type="button" onclick="calculate()">Calculate interest</button>
+    <p id="output"></p>
 
-    <script>
-      function calculate() {}
-    </script>
+    <script src="interest.js"></script>
   </body>
 </html>
