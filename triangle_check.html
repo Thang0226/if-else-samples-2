@@ -2,7 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>a divisible b</title>
+    <title>Triangle check</title>
   </head>
-  <body></body>
+  <body>
+    <h2>Triangle Checker</h2>
+    <p>Input 3 side lengths:</p>
+    <p>Side a:<input type="number" id="a" /></p>
+    <p>Side b:<input type="number" id="b" /></p>
+    <p>Side c:<input type="number" id="c" /></p>
+    <p><button type="button" onclick="calculate()">Check</button></p>
+    <p id="output"></p>
+
+    <script>
+      function calculate() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        let isTriangle = false;
+
+        if (a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && c + a > b) {
+          isTriangle = true;
+        }
+
+        if (isTriangle) {
+          document.getElementById("output").innerHTML = "This is a triangle.";
+        } else {
+          document.getElementById("output").innerHTML =
+            "This is NOT a triangle.";
+        }
+      }
+    </script>
+  </body>
 </html>

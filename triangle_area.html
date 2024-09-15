@@ -2,7 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>a divisible b</title>
+    <title>Triangle Area</title>
   </head>
-  <body></body>
+  <body>
+    <h2>Triangle Area Calculator</h2>
+    <p>Input side length of the right triangle:</p>
+    <p>Side a:<input type="number" id="a" /></p>
+    <p>Side b:<input type="number" id="b" /></p>
+    <p><button type="button" onclick="calculate()">Calculate</button></p>
+    <p id="output"></p>
+
+    <script>
+      function calculate() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let area = (a * b) / 2;
+        document.getElementById(
+          "output"
+        ).innerHTML = `Area of the right triangle = ${area}`;
+      }
+    </script>
+  </body>
 </html>

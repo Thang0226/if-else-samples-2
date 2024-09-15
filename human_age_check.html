@@ -2,7 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>a divisible b</title>
+    <title>Age check</title>
   </head>
-  <body></body>
+  <body>
+    <h2>Age checker</h2>
+    <p>Enter an age:</p>
+    <p>
+      <input type="number" id="age" />
+    </p>
+    <button type="button" onclick="check()">Check</button>
+    <p id="output"></p>
+
+    <script>
+      function check() {
+        let age = +document.getElementById("age").value;
+        let output = "";
+        if (age > 0 && age < 120) {
+          output = "This is a person's age.";
+        } else {
+          output = "This is NOT a person's age.";
+        }
+        document.getElementById("output").innerHTML = output;
+      }
+    </script>
+  </body>
 </html>

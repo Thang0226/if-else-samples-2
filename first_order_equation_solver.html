@@ -2,7 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>a divisible b</title>
+    <title>First-order equation solver</title>
   </head>
-  <body></body>
+  <body>
+    <h2>First-order equation solver</h2>
+    This program solves equations with the form of
+    <span style="color: blue">ax + b = 0</span>
+    <p>Enter parameters:</p>
+    <p>a = <input type="number" id="a" /></p>
+    <p>b = <input type="number" id="b" /></p>
+    <button type="button" onclick="calculate()">Calculate x</button>
+    <p id="output"></p>
+
+    <script>
+      function calculate() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+
+        let x = -b / a;
+
+        document.getElementById("output").innerHTML = `x = ${x}`;
+      }
+    </script>
+  </body>
 </html>

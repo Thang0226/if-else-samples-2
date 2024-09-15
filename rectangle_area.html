@@ -2,22 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Square area</title>
+    <title>Rectangle area</title>
   </head>
   <body>
-    <h2>Square Area Calculator</h2>
-    <p>Input side length of the square:</p>
-    <p><input type="number" id="side_length" /></p>
+    <h2>Rectangle Area Calculator</h2>
+    <p>Input side length of the rectangle:</p>
+    <p>Side a:<input type="number" id="a" /></p>
+    <p>Side b:<input type="number" id="b" /></p>
     <p><button type="button" onclick="calculate()">Calculate</button></p>
     <p id="output"></p>
 
     <script>
       function calculate() {
-        let len = +document.getElementById("side_length").value;
-        let area = len * len;
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let area = a * b;
         document.getElementById(
           "output"
-        ).innerHTML = `Area of the square = ${area}`;
+        ).innerHTML = `Area of the rectangle = ${area}`;
       }
     </script>
   </body>
